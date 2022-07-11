@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <meta charset="utf8" />
+    <title>Report</title>
+    <style>
+      /*
+      Tamaños utilizados en EEUU
+      Formato	Medida
+      Carta	216 x 279 mm
+      Legal	216 x 356 mm
+      Tabloide	279 x 432 mm
+      */
+      /* Carta	157.8mm x 279? mm */
+
+      body,
+      table,
+      th,
+      td {
+        font-size: 11px;
+        vertical-align: top;
+      }
+
+      table,
+      th,
+      td {
+        border: 0px solid black;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        padding: 5px;
+        text-align: left;
+      }
+
+      .title-report-principal {
+        color: #1466d6;
+        font-weight: 600;
+        font-size: 16;
+      }
+      .titles {
+        color: #1466d6;
+        font-weight: 600;
+      }
+
+      .body-report {
+        border: 1 solid #2d2d2d;
+        border-bottom: 0;
+      }
+      .body-report-end {
+        border-bottom: 1 solid #2d2d2d;
+      }
+
+      .head-report-col-1 {
+        width: 73mm;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .head-report-col-2 {
+        width: 73mm;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .body-report-col-1 {
+        width: 16mm;
+        display: inline-block;
+        vertical-align: top;
+        padding: 10 0 5 5;
+        border: 0;
+      }
+      .body-report-col-2 {
+        width: 125mm;
+        display: inline-block;
+        vertical-align: top;
+        padding: 10 5 5 5;
+        padding-bottom: 15;
+        border-left: 1 solid #2d2d2d;
+      }
+    </style>
+  </head>
+  <body>
+    <!--     
+    <div id="pageHeader">Default header</div>
+    <div id="pageHeader-first">Header on first page</div>
+    <div id="pageHeader-2">Header on second page</div>
+    <div id="pageHeader-3">Header on third page</div>
+    <div id="pageHeader-last">Header on last page</div> 
+  -->
+
+    <div class="head-report-col-1">
+      <div class="title-report-principal">Informe clínico</div>
+      <div><small>Privado y confidencial</small></div>
+      <br />
+      <img
+        src="https://www.tuhospitalvirtual.com/themes/tuagendamedica/resources/images/logos/logoweb.png"
+        height="30"
+      />
+    </div>
+    <div class="head-report-col-2">
+      <table style="margin-right: 0px; margin-left: auto">
+        <tr>
+          <th style="padding: 2; font-size: 10">Doctor(a):</th>
+          <td style="padding: 2; font-size: 10">{{doctorName}}</td>
+        </tr>
+        <tr>
+          <th style="padding: 2; font-size: 10">Número colegiado:</th>
+          <td style="padding: 2; font-size: 10">{{doctorCollegiateNumber}}</td>
+        </tr>
+        <tr>
+          <th style="padding: 2; font-size: 10">Especialidad:</th>
+          <td style="padding: 2; font-size: 10">{{doctorSpecialty}}</td>
+        </tr>
+        <!-- <tr>
+          <th style="padding: 2; font-size: 10">Consultorio:</th>
+          <td style="padding: 2; font-size: 10">XXXX FALTA FRONT XXXX</td>
+        </tr> -->
+        <tr>
+          <th style="padding: 2; font-size: 10">Fecha de la consulta:</th>
+          <td style="padding: 2; font-size: 10">{{consultationDate}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <br />
+    <br />
+    <div class="body-report">
+      <div class="body-report-col-1 titles">Paciente</div>
+      <div class="body-report-col-2">
+        <table>
+          <tr>
+            <th style="padding: 2">Cédula:</th>
+            <td style="padding: 2">{{patientDni}}</td>
+          </tr>
+          <tr>
+            <th style="padding: 2">Nombre:</th>
+            <td style="padding: 2">{{patientName}}</td>
+          </tr>
+          <tr>
+            <th style="padding: 2">Genero:</th>
+            <td style="padding: 2">{{patientGender}}</td>
+          </tr>
+          <tr>
+            <th style="padding: 2">F. nacimiento:</th>
+            <td style="padding: 2">{{patientBirthDate}}</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <div class="body-report">
+      <div class="body-report-col-1 titles">Diagnóstico</div>
+      <div class="body-report-col-2">{{consultationDiagnosis}}</div>
+    </div>
+    <div class="body-report">
+      <div class="body-report-col-1 titles">Recetas</div>
+      <div class="body-report-col-2">{{consultationPrescription}}</div>
+    </div>
+    <div class="body-report">
+      <div class="body-report-col-1 titles">Exámenes</div>
+      <div class="body-report-col-2">{{consultationExams}}</div>
+    </div>
+    <div class="body-report body-report-end">
+      <div class="body-report-col-1 titles">Cotización</div>
+      <div class="body-report-col-2">{{consultationQuote}}</div>
+    </div>
+
+    <!-- 
+    <div id="pageFooter">Default footer</div>
+    <div id="pageFooter-first">Footer on first page</div>
+    <div id="pageFooter-2">Footer on second page</div>
+    <div id="pageFooter-last">Footer on last page</div>
+     -->
+  </body>
+</html>
